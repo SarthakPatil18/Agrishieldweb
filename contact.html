@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us – Agrishield Industries</title>
+<link rel="stylesheet" href="../css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init('YOUR_EMAILJS_PUBLIC_KEY');</script>
+</head>
+<body>
+
+<header id="masthead">
+  <div class="header-inner">
+    <div class="site-logo">
+      <img src="../images/logo1.jpeg" alt="Agrieshield Industries Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="logo-ph" style="display:none;">AGRISHIELD<br>Industries Pvt Ltd</div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="has-dropdown">
+          <a href="#">Products</a>
+          <ul class="dropdown-menu">
+            <li><a href="organic-biostimulants.html">Organic BioStimulants</a></li>
+            <li><a href="micronutrients.html">Micronutrients</a></li>
+            <li><a href="water-soluble-fertilizers.html">Water Soluble Fertilizers</a></li>
+            <li><a href="insecticides.html">⁠Insecticides/ Pesticides/ Herbicides</a></li>
+            <li><a href="adjuvants.html">Adjuvants</a></li>
+            <li><a href="organic-bio-fertilizers.html">Organic Bio Fertilizers</a></li>
+          </ul>
+        </li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li class="current"><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <h1>Contact Us</h1>
+  <div class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <span>Contact Us</span></div>
+</div>
+
+<!-- CONTACT SECTION -->
+<div class="contact-wrap">
+
+  <!-- LEFT: Info + Map -->
+  <div class="contact-info">
+    <h3>Get In Touch</h3>
+
+    <div class="contact-item">
+      <div class="contact-icon">📍</div>
+      <div>
+        <h4>Address</h4>
+        <p>Plot No. 55, Gat No. 679, Behind Maruti Suzuki Showroom,<br>
+        Pune Nashik Highway, Kuruli, Tal: Khed,<br>
+        Dist: Pune – 410501, Maharashtra, India</p>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <div class="contact-icon">📞</div>
+      <div>
+        <h4>Phone Numbers</h4>
+        <p>
+          <a href="tel:+919359687781">+91 9359687781</a><br>
+          <a href="tel:+917972610839">+91 7972610839</a><br>
+          <a href="tel:+919021342901">+91 9021342901</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <div class="contact-icon">💬</div>
+      <div>
+        <h4>WhatsApp</h4>
+        <p>
+          <a href="https://wa.link/x2dwwd" target="_blank">+91 9359687781</a><br>
+          <a href="https://wa.link/gpwinv" target="_blank">+91 7972610839</a><br>
+          <a href="https://wa.link/3tkeur" target="_blank">+91 9021342901</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <div class="contact-icon">✉</div>
+      <div>
+        <h4>Email</h4>
+        <p>
+          <a href="mailto:shantishwar.patil@agrishieldindustries.com">shantishwar.patil@agrishieldindustries.com</a><br>
+          <a href="mailto:info.agrishield@gmail.com">info.agrishield@gmail.com</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- GOOGLE MAP -->
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3778.0!2d73.8680!3d18.7640!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDQ1JzUwLjQiTiA3M8KwNTInMDQuOCJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin&q=Kuruli,Khed,Pune,Maharashtra"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- RIGHT: Form -->
+  <div class="contact-form">
+    <h3>Send Us An Enquiry</h3>
+    <form id="contactForm" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Your Name *</label>
+          <input type="text" name="name" placeholder="Full Name" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number *</label>
+          <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="your@email.com">
+      </div>
+      <div class="form-group">
+        <label>Product Interest</label>
+        <select name="product">
+          <option value="">— Select a Category —</option>
+          <option>Organic BioStimulants</option>
+          <option>Micronutrients</option>
+          <option>Water Soluble Fertilizers</option>
+          <option>Insecticides / Pesticides / Herbicides</option>
+          <option>Adjuvants</option>
+          <option>Organic Bio Fertilizers</option>
+          <option>General Enquiry</option>
+          <option>Dealership / Distribution</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Your Message *</label>
+        <textarea name="message" placeholder="Tell us about your requirements..." required></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Send Enquiry</button>
+      <div id="formMsg" class="form-msg"></div>
+    </form>
+  </div>
+
+</div>
+
+<!-- CTA STRIP -->
+<div id="cta-strip">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <h2>LOOKING FOR A RELIABLE SUPPLIER?</h2>
+      <p>At Agrishield Industries Pvt Ltd, we aim to build long-term partnerships with our clients in order to ensure a world-class, integrated supply chain.</p>
+    </div>
+    <div class="cta-buttons">
+      <a href="tel:+919021342901" class="btn-white">📞 Call Now</a>
+      <a href="mailto:info.agrishield@gmail.com" class="btn-outline-white">✉ Email Us</a>
+    </div>
+  </div>
+</div>
+
+<footer id="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">
+        <img src="../images/logo1.jpeg" alt="Agrishield Logo" onerror="this.outerHTML='<div class=\'footer-logo-ph\'>AGRISHIELD®</div>'">
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="organic-biostimulants.html">Organic BioStimulants</a></li>
+        <li><a href="micronutrients.html">Micronutrients</a></li>
+        <li><a href="water-soluble-fertilizers.html">Water Soluble Fertilizers</a></li>
+        <li><a href="insecticides.html">Insecticides/ Pesticides/ Herbicides</a></li>
+        <li><a href="adjuvants.html">Adjuvants</a></li>
+        <li><a href="organic-bio-fertilizers.html">Organic Bio Fertilizers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>Get In Touch</h4>
+      <p><strong>Phone:</strong> <a href="tel:+919359687781">+919359687781</a> / <a href="tel:+917972610839">+917972610839</a> / <a href="tel:+919021342901">+919021342901</a></p>
+      <p><strong>Email Id:</strong> <a href="mailto:info.agrishield@gmail.com">info.agrishield@gmail.com</a></p>
+      <p><strong>Address:</strong> Plot No. 55, Gat No. 679, Kuruli, Tal: Khed, Dist: Pune- 410501 Maharashtra, India</p>
+    </div>
+  </div>
+  <div class="footer-bottom">Copyright @ 2025 | <a href="../index.html">Agrishield Industries Pvt Ltd</a> | All Rights Reserved | Powered by <a href="https://www.vrbsoft.com" target="_blank">Vrbsoft</a></div>
+</footer>
+
+<div class="float-btns">
+  <a href="https://web.whatsapp.com/send?phone=+919021342901" class="float-btn float-wa" target="_blank">💬</a>
+  <a href="tel:+919021342901" class="float-btn float-ph">📞</a>
+</div>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

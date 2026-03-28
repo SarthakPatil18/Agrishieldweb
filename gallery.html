@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery – Agrishield Industries</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.gallery-wrap { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.gallery-item {
+  overflow: hidden;
+  border-radius: 4px;
+  background: #e8f5e9;
+  aspect-ratio: 1;
+  cursor: pointer;
+  position: relative;
+}
+.gallery-item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.gallery-item:hover img { transform: scale(1.08); }
+.gallery-item .overlay {
+  position: absolute; inset: 0;
+  background: rgba(26,75,26,0.0);
+  transition: background 0.3s;
+  display: flex; align-items: center; justify-content: center;
+}
+.gallery-item:hover .overlay { background: rgba(26,75,26,0.3); }
+.gallery-ph {
+  width: 100%; height: 100%;
+  background: #c8e6c9;
+  display: flex; align-items: center; justify-content: center;
+  color: #2d7a2d; font-size: 12px; font-weight: 600; text-align: center; padding: 10px;
+}
+/* Lightbox */
+.lightbox {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,0.92); z-index: 99999;
+  align-items: center; justify-content: center;
+}
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 4px; }
+.lb-close {
+  position: absolute; top: 20px; right: 28px;
+  color: #fff; font-size: 40px; cursor: pointer; line-height: 1;
+  background: none; border: none;
+}
+.lb-prev, .lb-next {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  color: #fff; font-size: 50px; cursor: pointer; background: none; border: none;
+}
+.lb-prev { left: 20px; }
+.lb-next { right: 20px; }
+@media(max-width:900px){ .gallery-grid { grid-template-columns: repeat(2,1fr); } }
+</style>
+</head>
+<body>
+<header id="masthead"><div class="header-inner">
+  <div class="site-logo"><img src="../images/logo1.jpeg" alt="Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="logo-ph" style="display:none;">AGRISHIELD<br>Industries Pvt Ltd</div></div>
+  <nav class="main-nav"><ul><li><a href="../index.html">Home</a></li><li><a href="about.html">About Us</a></li><li class="has-dropdown"><a href="#">Products</a><ul class="dropdown-menu"><li><a href="organic-biostimulants.html">Organic BioStimulants</a></li><li><a href="micronutrients.html">Micronutrients</a></li><li><a href="water-soluble-fertilizers.html">Water Soluble Fertilizers</a></li><li><a href="insecticides.html">Insecticides/ Pesticides/ Herbicides</a></li><li><a href="adjuvants.html">Adjuvants</a></li><li><a href="organic-bio-fertilizers.html">Organic Bio Fertilizers</a></li></ul></li><li class="current"><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact Us</a></li></ul></nav>
+</div></header>
+
+<div class="page-hero"><h1>Gallery</h1><div class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <span>Gallery</span></div></div>
+
+<div class="gallery-wrap">
+  <p style="color:#555;margin-bottom:30px;font-size:14px;">📸 Gallery images will appear here once uploaded. Place your images in the <strong>images/gallery/</strong> folder and update the src attributes below.</p>
+  <div class="gallery-grid" id="galleryGrid">
+    <!-- Add your gallery images here. Example: -->
+    <!-- <div class="gallery-item" onclick="openLightbox(0)"><img src="../images/gallery/img1.jpg" alt="Gallery 1"><div class="overlay"></div></div> -->
+
+    <!-- Placeholders — replace with real images -->
+    <div class="gallery-item"><div class="gallery-ph">Gallery Image 1<br>(upload to images/gallery/)</div></div>
+    <div class="gallery-item"><div class="gallery-ph">Gallery Image 2<br>(upload to images/gallery/)</div></div>
+    <div class="gallery-item"><div class="gallery-ph">Gallery Image 3<br>(upload to images/gallery/)</div></div>
+    <div class="gallery-item"><div class="gallery-ph">Gallery Image 4<br>(upload to images/gallery/)</div></div>
+    <div class="gallery-item"><div class="gallery-ph">Gallery Image 5<br>(upload to images/gallery/)</div></div>
+    <div class="gallery-item"><div class="gallery-ph">Gallery Image 6<br>(upload to images/gallery/)</div></div>
+    <div class="gallery-item"><div class="gallery-ph">Gallery Image 7<br>(upload to images/gallery/)</div></div>
+    <div class="gallery-item"><div class="gallery-ph">Gallery Image 8<br>(upload to images/gallery/)</div></div>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" onclick="closeLightbox()">&#215;</button>
+  <button class="lb-prev" onclick="lbPrev()">&#8249;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-next" onclick="lbNext()">&#8250;</button>
+</div>
+
+<div id="cta-strip"><div class="cta-inner"><div class="cta-text"><h2>LOOKING FOR A RELIABLE SUPPLIER?</h2><p>At Agrishield Industries Pvt Ltd, we aim to build long-term partnerships with our clients.</p></div><div class="cta-buttons"><a href="tel:+919021342901" class="btn-white">📞 Call Now</a><a href="mailto:info.agrishield@gmail.com" class="btn-outline-white">✉ Email Us</a></div></div></div>
+<footer id="footer"><div class="footer-inner"><div><div class="footer-logo"><img src="../images/logo1.jpeg" alt="Logo" onerror="this.outerHTML='<div class=\'footer-logo-ph\'>AGRISHIELD®</div>'"></div></div><div class="footer-col"><h4>Products</h4><ul><li><a href="organic-biostimulants.html">Organic BioStimulants</a></li><li><a href="micronutrients.html">Micronutrients</a></li><li><a href="water-soluble-fertilizers.html">Water Soluble Fertilizers</a></li><li><a href="insecticides.html">Insecticides/ Pesticides/ Herbicides</a></li><li><a href="adjuvants.html">Adjuvants</a></li><li><a href="organic-bio-fertilizers.html">Organic Bio Fertilizers</a></li></ul></div><div class="footer-col footer-contact"><h4>Get In Touch</h4><p><strong>Phone:</strong> <a href="tel:+919359687781">+919359687781</a> / <a href="tel:+917972610839">+917972610839</a> / <a href="tel:+919021342901">+919021342901</a></p><p><strong>Email Id:</strong> <a href="mailto:info.agrishield@gmail.com">info.agrishield@gmail.com</a></p><p><strong>Address:</strong> Plot No. 55, Gat No. 679, Kuruli, Tal: Khed, Dist: Pune- 410501 Maharashtra, India</p></div></div><div class="footer-bottom">Copyright @ 2025 | <a href="../index.html">Agrishield Industries Pvt Ltd</a> | All Rights Reserved | Powered by <a href="https://www.vrbsoft.com" target="_blank">Vrbsoft</a></div></footer>
+<div class="float-btns"><a href="https://web.whatsapp.com/send?phone=+919021342901" class="float-btn float-wa" target="_blank">💬</a><a href="tel:+919021342901" class="float-btn float-ph">📞</a></div>
+
+<script src="../js/main.js"></script>
+<script>
+const lbImgs = [];
+document.querySelectorAll('.gallery-item img').forEach((img, i) => {
+  lbImgs.push(img.src);
+  img.parentElement.onclick = () => openLightbox(i);
+});
+let lbCur = 0;
+function openLightbox(i) {
+  lbCur = i;
+  document.getElementById('lbImg').src = lbImgs[i];
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox() { document.getElementById('lightbox').classList.remove('open'); }
+function lbNext() { lbCur = (lbCur + 1) % lbImgs.length; document.getElementById('lbImg').src = lbImgs[lbCur]; }
+function lbPrev() { lbCur = (lbCur - 1 + lbImgs.length) % lbImgs.length; document.getElementById('lbImg').src = lbImgs[lbCur]; }
+document.getElementById('lightbox').addEventListener('click', function(e){ if(e.target===this) closeLightbox(); });
+</script>
+</body></html>
